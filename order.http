@@ -1,0 +1,41 @@
+@token = insert token 
+@local=http://localhost:3000
+
+
+###
+POST {{local}}/api/orders
+Content-Type: application/json
+acsses-token: {{token}}
+
+{
+"orderData" : {
+    "name": "tester man",
+    "email": "tester@gmail.com",
+    "phone": "052123467",
+    "homeAddress": "tester filed 6 england",
+    "tomato": 4,
+    "apple": 5,
+    "onion": 6,
+    "tofu": 1
+}
+}
+
+###
+GET {{local}}/api/orders
+Content-Type: application/json
+
+
+{ 
+    "_id": "insert id"  
+}
+
+
+###
+DELETE {{local}}/api/orders
+Content-Type: application/json
+
+
+{ 
+    "_id": "insert id"  
+}
+

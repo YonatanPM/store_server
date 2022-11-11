@@ -1,0 +1,52 @@
+@token = insert token
+@local=http://localhost:3000
+
+
+###
+POST {{local}}/api/users
+Content-Type: application/json
+
+{
+
+    "name": "tester man",
+    "email": "tester@gmail.com",
+    "phone": "0521234567",
+    "password": "123456",
+    "homeAddress": "tester filed 6 england" 
+}
+
+###
+POST {{local}}/api/auth
+Content-Type: application/json
+
+{ 
+    "email": "tester@gmail.com",
+    "password": "123456"
+}
+
+###
+GET {{local}}/api/users
+Content-Type: application/json
+acsses-token: {{token}}
+
+{ 
+    "_id": "insert id"  
+}
+
+###
+GET {{local}}/api/users/get_user_for_admin
+Content-Type: application/json
+
+{ 
+    "_id": "insert id"  
+}
+
+
+###
+DELETE {{local}}/api/users
+Content-Type: application/json
+
+{ 
+    "_id": "insert id"  
+}
+

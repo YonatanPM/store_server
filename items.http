@@ -1,0 +1,62 @@
+@token = insert token
+@local=http://localhost:3000
+
+
+###
+POST {{local}}/api/items
+Content-Type: application/json
+
+{
+
+    "itemName": "tomato",
+    "price": 10,
+    "quantityInStorage": 1000,
+    "section": "vegtables",
+    "sale": false
+}
+
+###
+PUT {{local}}/api/items
+Content-Type: application/json
+
+{
+
+    "itemName": "tomato",
+    "price": 10,
+    "quantityInStorage": 55,
+    "section": "vegtables",
+    "sale": true
+}
+
+###
+GET {{local}}/api/items
+Content-Type: application/json
+
+{ 
+    "itemName": "tomato"  
+}
+
+###
+GET {{local}}/api/items/get_all
+Content-Type: application/json
+
+{ 
+      
+}
+
+###
+GET {{local}}/api/items/get_by_section
+Content-Type: application/json
+
+{ 
+    "section": "vegtables"      
+}
+
+
+###
+DELETE {{local}}/api/items
+Content-Type: application/json
+
+{ 
+    "itemName": "tomato"  
+}
