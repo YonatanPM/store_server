@@ -1,6 +1,6 @@
 This project is my first server built using node js
 
-It simulates the store server using the express framework and MongoDB database.
+It simulates store server using the express framework and MongoDB database.
 The data passed from the UI is processed and stored by the mongoose library aided by Joi for validation.
 jwt library supplies the app authentication and authorization services  
 using express routers enabled the server endpoints to be separated by functionality
